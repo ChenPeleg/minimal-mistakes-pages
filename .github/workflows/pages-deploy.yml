@@ -37,8 +37,19 @@ jobs:
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
       - name: change folders to match Jekyll
         run: |
-          cp -r ./docs/. ./_posts
+          cp -r ./docs/. ./_fake_posts
           cp -r ./_tabs/. ./_posts
+      - name: rename fake files
+        run: |
+          cd ./_fake_posts
+          rename 's/^/Unix_/' *
+      - name: copy fake files to post
+        run: |
+          cp -r ./_fake_posts/. ./_posts
+
+
+      # rename 's/^/Unix_/' *
+       # find . -type f -name '*' -printf "echo mv '%h/%f' '%h/Unix_%f\n'" | sh
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v1
