@@ -42,7 +42,8 @@ jobs:
       - name: rename fake files
         run: |
           cd ./_fake_posts
-          rename 's/^/Unix_/' *
+          find . -type f -name '*' -printf "echo mv '%h/%f' '%h/Unix_%f\n'" | sh
+        #  rename 's/^/Unix_/' *
       - name: copy fake files to post
         run: |
           cp -r ./_fake_posts/. ./_posts
