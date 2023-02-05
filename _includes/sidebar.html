@@ -40,7 +40,7 @@
 
     <!-- the real tabs -->
     {% for tab in site.tabs %}
-    {% assign fake_tab_url = tab.url %}
+    {% assign fake_tab_url = "posts/" | append: tab.url %}
     <li class="nav-item{% if fake_tab_url == page.url %}{{ " active" }}{% endif %}">
       <a href="{{ fake_tab_url | relative_url }}" class="nav-link">
         <i class="fa-fw {{ tab.icon }} ml-xl-3 mr-xl-3 unloaded"></i>
