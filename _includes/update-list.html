@@ -2,39 +2,57 @@
   Get the last 5 posts from lastmod list.
 {% endcomment %}
 
-{% assign MAX_SIZE = 5 %}
-
-{% assign all_list = "" | split: "" %}
-
-{% for post in site.posts %}
-  {% if post.last_modified_at %}
-    {% capture elem %}
-      {{- post.last_modified_at | date: "%Y%m%d%H%M%S" -}}::{{- forloop.index0 -}}
-    {% endcapture %}
-    {% assign all_list = all_list | push: elem %}
-  {% endif %}
-{% endfor %}
-
-{% assign all_list = all_list | sort | reverse %}
-
-{% assign update_list = "" | split: "" %}
-
-{% for entry in all_list limit:MAX_SIZE %}
-  {% assign update_list = update_list | push: entry %}
-{% endfor %}
-
-{% if update_list.size > 0 %}
-
-  <div id="access-lastmod" class="post">
-    <div class="panel-heading">{{- site.data.locales[site.lang].panel.lastmod -}}</div>
-    <ul class="post-content pl-0 pb-1 ml-1 mt-2">
-      {% for item in update_list %}
-        {% assign index = item | split: "::" | last | plus: 0 %}
-        {% assign post = site.posts[index] %}
-        {% assign url = post.url | relative_url %}
-      <li><a href="{{ url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div> <!-- #access-lastmod -->
-
+{% assign enable_toc = false %}
+{% if site.toc and page.toc %}
+{% if page.content contains '<h2' or page.content contains '<h3' %}
+{% assign enable_toc = true %}
 {% endif %}
+{% endif %}
+
+{% if enable_toc %}
+<!-- BS-toc.js will be loaded at medium priority -->
+<script src="{{ site.data.assets[origin].bootstrap-toc.js | relative_url }}"></script>
+
+<div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+  <div class="panel-heading pl-3 pt-2 mb-2">{{- site.data.locales[site.lang].panel.toc -}}</div>
+  <nav id="toc" data-toggle="toc"></nav>
+</div>
+{% endif %}
+
+
+<!--{% assign MAX_SIZE = 5 %}-->
+
+<!--{% assign all_list = "" | split: "" %}-->
+
+<!--{% for post in site.posts %}-->
+<!--  {% if post.last_modified_at %}-->
+<!--    {% capture elem %}-->
+<!--      {{- post.last_modified_at | date: "%Y%m%d%H%M%S" -}}::{{- forloop.index0 -}}-->
+<!--    {% endcapture %}-->
+<!--    {% assign all_list = all_list | push: elem %}-->
+<!--  {% endif %}-->
+<!--{% endfor %}-->
+
+<!--{% assign all_list = all_list | sort | reverse %}-->
+
+<!--{% assign update_list = "" | split: "" %}-->
+
+<!--{% for entry in all_list limit:MAX_SIZE %}-->
+<!--  {% assign update_list = update_list | push: entry %}-->
+<!--{% endfor %}-->
+
+<!--{% if update_list.size > 0 %}-->
+
+<!--  <div id="access-lastmod" class="post">-->
+<!--    <div class="panel-heading">{{- site.data.locales[site.lang].panel.lastmod -}}</div>-->
+<!--    <ul class="post-content pl-0 pb-1 ml-1 mt-2">-->
+<!--      {% for item in update_list %}-->
+<!--        {% assign index = item | split: "::" | last | plus: 0 %}-->
+<!--        {% assign post = site.posts[index] %}-->
+<!--        {% assign url = post.url | relative_url %}-->
+<!--      <li><a href="{{ url }}">{{ post.title }}</a></li>-->
+<!--      {% endfor %}-->
+<!--    </ul>-->
+<!--  </div> &lt;!&ndash; #access-lastmod &ndash;&gt;-->
+
+<!--{% endif %}-->
