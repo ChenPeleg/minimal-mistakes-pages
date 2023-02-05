@@ -35,21 +35,20 @@ jobs:
       - name: change folders to match Jekyll
         run: |
           cp -r ./docs/. ./_posts
-          cp -r ./_tabs/. ./_fake_posts
+          cp -r ./_tabs/. ./_temp_posts
       - name: rename fake files
         run: |
-          cd ./_fake_posts
-          find . -type f -name '*' -printf "echo mv '%h/%f' '%h/2023-2-2-%f\n'" | sh
-        # cd ./_fake_posts && for FILENAME in *; do mv $FILENAME 2023-2-2-$FILENAME; done
+          cd ./_temp_posts
+          ls | xargs -I {} mv {} 2023-2-2-{}
+# find . -type f -name '*' -printf "echo mv '%h/%f' '%h/2023-2-2-%f\n'" | sh
 
-        #  rename 's/^/2023-2-2-/' *
       - name: copy fake files to post
         run: |
           ls
-          cp -r ./_fake_posts/. ./_posts
+          cp -r ./_temp_posts/. ./_posts
       - name: Check post folder
         run: |
-          ls ./_fake_posts/
+          ls ./_temp_posts/
 
 
 
