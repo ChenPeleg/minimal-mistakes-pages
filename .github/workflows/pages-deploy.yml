@@ -42,14 +42,18 @@ jobs:
       - name: rename fake files
         run: |
           cd ./_fake_posts
-          find . -type f -name '*' -printf "echo mv '%h/%f' '%h/Unix_%f\n'" | sh
+          ls | xargs -I {} mv {} 2023-2-2{}
+        #  find . -type f -name '*' -printf "echo mv '%h/%f' '%h/Unix_%f\n'" | sh
         #  rename 's/^/Unix_/' *
       - name: copy fake files to post
         run: |
+          ls
           cp -r ./_fake_posts/. ./_posts
       - name: Check post folder
         run: |
+          ls ./_fake_posts/
           ls ./_posts/
+
 
 
       # rename 's/^/Unix_/' *
