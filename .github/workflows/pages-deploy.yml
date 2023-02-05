@@ -41,8 +41,7 @@ jobs:
           cp -r ./_tabs/. ./_posts
       - name: rename fake files
         run: |
-          cd ./_fake_posts
-          ls | xargs -I {} mv {} 2023-2-2{}
+          cd ./_fake_posts && for FILENAME in *; do mv $FILENAME Unix_$FILENAME; done
         #  find . -type f -name '*' -printf "echo mv '%h/%f' '%h/Unix_%f\n'" | sh
         #  rename 's/^/Unix_/' *
       - name: copy fake files to post
@@ -52,7 +51,6 @@ jobs:
       - name: Check post folder
         run: |
           ls ./_fake_posts/
-          ls ./_posts/
 
 
 
