@@ -38,6 +38,7 @@ jobs:
           cp -r ./_tabs/. ./_fake_posts
       - name: rename fake files
         run: |
+          cd ./_fake_posts
           find . -type f -name '*' -printf "echo mv '%h/%f' '%h/2023-2-2-%f\n'" | sh
         # cd ./_fake_posts && for FILENAME in *; do mv $FILENAME 2023-2-2-$FILENAME; done
 
