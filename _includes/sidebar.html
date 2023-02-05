@@ -37,12 +37,14 @@
         <span>{{ site.data.locales[site.lang].tabs.home | upcase }}</span>
       </a>
     </li>
+
     <!-- the real tabs -->
     {% for tab in site.tabs %}
-    <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-      <a href="{{ tab.url | relative_url }}" class="nav-link">
+    {% assign fake_tab_url = tab.url %}
+    <li class="nav-item{% if fake_tab_url == page.url %}{{ " active" }}{% endif %}">
+      <a href="{{ fake_tab_url | relative_url }}" class="nav-link">
         <i class="fa-fw {{ tab.icon }} ml-xl-3 mr-xl-3 unloaded"></i>
-        {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+        {% capture tab_name %}{{ fake_tab_url | split: '/' }}{% endcapture %}
 
         <span>{{ site.data.locales[site.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
       </a>
