@@ -38,6 +38,7 @@ jobs:
       - name: change folders to match Jekyll
         run: |
           cp -r ./docs/. ./_posts
+          cp -r ./_tags/. ./_posts
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v1
