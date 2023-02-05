@@ -37,7 +37,7 @@ jobs:
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
       - name: change folders to match Jekyll
         run: |
-          cp -r ./doc/. ./posts
+          cp -r ./docs/. ./_posts
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v1
