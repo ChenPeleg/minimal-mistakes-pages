@@ -47,6 +47,9 @@ jobs:
       - name: copy fake files to post
         run: |
           cp -r ./_fake_posts/. ./_posts
+      - name: Check post folder
+        run: |
+          ls ./_posts/
 
 
       # rename 's/^/Unix_/' *
