@@ -787,7 +787,7 @@ $sidebar-display: "sidebar-display";
   .nav-item {
     text-align: center;
     display: table;
-    height: $tab-height;
+    //height: $tab-height; // Removed for close links
 
     &.active {
       .nav-link {
