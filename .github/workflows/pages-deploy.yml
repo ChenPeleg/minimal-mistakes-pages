@@ -34,7 +34,7 @@ jobs:
           fetch-depth: 0
       - name: Change and folders to match Jekyll
         run: |
-          cp -r ./docs/site. ./
+          cp -r ./docs/site/. ./
           cp -r ./docs/. ./_tabs
           cp -r ./_tabs/. ./_temp_posts
       - name: rename the post files with date
