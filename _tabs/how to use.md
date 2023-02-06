@@ -1,8 +1,5 @@
 ---
-title : how to use 
-order: 1
---- 
-
-# best way to use it
-
-I think there is a good way to use it
+title : how to use
+icon: fas fa-archive
+order: 3
+---
