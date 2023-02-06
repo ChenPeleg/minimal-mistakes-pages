@@ -1,7 +1,5 @@
 ---
-title : how to use
-layout: categories
-icon: fas fa-stream
+title : how to use 
 order: 1
 --- 
 
