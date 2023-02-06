@@ -50,10 +50,6 @@ jobs:
         run: |
           ls ./_temp_posts/
 
-
-
-      # rename 's/^/Unix_/' *
-       # find . -type f -name '*' -printf "echo mv '%h/%f' '%h/Unix_%f\n'" | sh
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v1
