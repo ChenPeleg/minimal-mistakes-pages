@@ -47,3 +47,21 @@ The calculation is like this:
 
 The work days are concluded in a table ike this:
 
+| Day  | Hours |                              Details |
+|:-----|:------|-------------------------------------:|
+| 20.1 | 5     | First commit message; second commit; |
+| 21.1 | 4     | My_Branch_name_#1; My_branch_Name_#2 |
+| 23.3 | 7     |                  Feature_branch_#114 |
+
+The table contains a summary for all days, for each month, and total. The months are arranged by year.
+
+### Details
+
+The detail column contains only partial information received from the git log:
+ 
+- branch names if are any (until a certain limit of characters per day)\
+- commit messages (until a certain limit of characters per day)
+
+
+
+
