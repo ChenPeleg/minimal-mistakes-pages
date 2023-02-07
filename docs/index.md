@@ -20,6 +20,11 @@ $ npx hours-report
 
 the console will output the location of a csv file that contains the report base on your git log. 
 
+## Inspirations
+
+Got the inspiration and many ideas
+from [git-hours](https://github.com/kimmobrunfeldt/git-hours), [git-time](https://github.com/vmf91/git-time) and more.
+
 ## Support
 
 ### Running with npx
