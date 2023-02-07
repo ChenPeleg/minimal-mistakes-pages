@@ -35,7 +35,26 @@ These are the options, with which you can change the default behaviour:
 ``` 
 
 ## Examples
+
 ### Changing the algorithm settings
+
+Estimate hours in repository where developer works about 1.5 hours before first commit 
+
+```console
+$ npx hours-report --min-session=90
+``` 
+
+Estimate hours in repository where developers commit more seldom: they might have 4h(240min) pause between commits
+
+```console
+$ npx hours-report --max-diff-for-session=240
+``` 
+
+Estimate hours in repository where commits are short and quick with no more than an hour (60min) pause between commits
+
+```console
+$ npx hours-report --max-diff-for-session=60
+``` 
 
 ### From and To Date
 
