@@ -33,6 +33,19 @@ These are the options, with which you can change the default behaviour:
 ``` 
 
 # Examples
+## Changing the algorithm settings
 
-# From and To Date
+## From and To Date
 
+These uses the git log [--until](https://git-scm.com/docs/git-log#Documentation/git-log.txt---untilltdategt)
+and [--since](https://git-scm.com/docs/git-log#Documentation/git-log.txt---sinceltdategt). 
+
+```console
+$ npx hours-report --date-from="2-2-23"
+``` 
+## Output
+
+To output the information only to the console, without generating a csv file, use:
+```console
+$ npx hours-report --output=console"
+``` 
