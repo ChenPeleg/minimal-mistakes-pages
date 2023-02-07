@@ -20,10 +20,18 @@ $ npx hours-report
 
 the console will output the location of a csv file that contains the report base on your git log. 
 
-## Supports
+## Support
 
-
+### Running with npx
++ [x] Node.js 12
++ [x] Node.js 14
++ [x] Node.js 16
++ [x] Node.js 18 
 
 The package is written in vanilla JS so no dependencies (only Typescript as dev dependency). 
 This is so it can support version 12-18 of nodeJS. 
+### Development
+To develop modify etc. use node 18 and above. All the test are written in node test runner that is available for this version
+
+
 
