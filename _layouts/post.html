@@ -14,15 +14,15 @@ tail_includes:
 <div class="post-meta text-muted">
     <!-- published date -->
     <span>
-      {{ site.data.locales[site.lang].post.posted }}
-      {% include datetime.html date=page.date tooltip=true %}
+<!--      {{ site.data.locales[site.lang].post.posted }}-->
+<!--      {% include datetime.html date=page.date tooltip=true %}-->
     </span>
 
     <!-- lastmod date -->
     {% if page.last_modified_at %}
     <span>
-      {{ site.data.locales[site.lang].post.updated }}
-      {% include datetime.html date=page.last_modified_at tooltip=true %}
+<!--      {{ site.data.locales[site.lang].post.updated }}-->
+<!--      {% include datetime.html date=page.last_modified_at tooltip=true %}-->
     </span>
     {% endif %}
 
@@ -51,20 +51,20 @@ tail_includes:
       {% if page.author %}
         {% assign authors = page.author %}
       {% elsif page.authors %}
-        {% assign authors = page.authors %}
+        {% assign authors =  page.authors %}
       {% endif %}
 
-      {{ site.data.locales[site.lang].post.written_by }}
+<!--      {{ site.data.locales[site.lang].post.written_by }}-->
 
       <em>
-      {% if authors %}
-        {% for author in authors %}
-          <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
-          {% unless forloop.last %}</em>, <em>{% endunless %}
-        {% endfor %}
-      {% else %}
-        <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
-      {% endif %}
+<!--      {% if authors %}-->
+<!--        {% for author in authors %}-->
+<!--          <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>-->
+<!--          {% unless forloop.last %}</em>, <em>{% endunless %}-->
+<!--        {% endfor %}-->
+<!--      {% else %}-->
+<!--        <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>-->
+<!--      {% endif %}-->
       </em>
     </span>
 
