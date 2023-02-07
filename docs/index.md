@@ -30,8 +30,37 @@ the console will output the location of a csv file that contains the report base
 
 The package is written in vanilla JS so no dependencies (only Typescript as dev dependency). 
 This is so it can support version 12-18 of nodeJS. 
+
 ### Development
-To develop modify etc. use node 18 and above. All the test are written in node test runner that is available for this version
+
++ [x] Node.js 19
+
+
+To develop modify etc. use node 18 and above. 
+All the test are written in node test runner that is available for this version, and the types dev-dependencies. 
+
+#### Installation
+
+```console
+$ npm i hours-report
+``` 
+
+#### Unit testing
+
+The unites testing is done with the new *experimental* [NodeJs test runner](https://nodejs.org/api/test.html).
+
+```console
+$ npm test
+``` 
+
+#### E2e test
+
+contains only one test (used for CI purposes and to check node versions compatibility)
+
+```console
+$ npm run e2e
+``` 
+
 
 
 
