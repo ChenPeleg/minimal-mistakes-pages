@@ -34,7 +34,11 @@ The calculation is like this:
 ![commits across the day](/assets/img/commit-diagram-3.svg)
 </div>
 
-3.  Each session is added with the **min-session** value, to represent the time spent before the first commit.  
+3.  Each work session is added with the **min-session** value, to represent the time spent before the first commit.  
 <div markdown=1 style="border-radius: 5px; box-shadow: 0px 0px 10px #6a6a6a; padding: 15px 30px ; background-color: #b2b2b2">
 ![commits across the day](/assets/img/commit-diagram-4.svg)
+</div>
+4. work sessions are grouped toghether to form "work days":
+<div markdown=1 style="border-radius: 5px; box-shadow: 0px 0px 10px #6a6a6a; padding: 15px 30px ; background-color: #b2b2b2">
+![commits across the day](/assets/img/commit-diagram-5.svg)
 </div>
