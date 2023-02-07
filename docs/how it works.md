@@ -11,21 +11,18 @@ The process runs a `git log` command and then analyzes the results, of your comm
 
 Two settings are used to calculate the session from the logs:
 
-- maximum time between commits to be considered in one session
-- default 120m minuets
+- **max-diff-for-session** - maximum difference in minutes between commits counted to one session. Default: 120
+- **min-session** = how many minutes the first commit of a session should add to total. Default: 30
 
-Imaging this is your work day, and the dots represent the commits time stamps:
+Imaging this is your work day, and the circles represent the commits over time:
 
-<div markdown=1 style="border-radius: 5px; box-shadow: #6a6a6a  ; background-color: #b2b2b2">
-
+<div markdown=1 style="border-radius: 5px; box-shadow: 0px 0px 10px #6a6a6a; padding: 15px 30px ; background-color: #b2b2b2">
 ![commits across the day](/assets/img/commit-diagram-1.svg)
-commits across the day
-
 </div>
 
 Imaging this is your work day, and the dots represent the commits time stamps:
 
-<div style="border-radius: 10px; box-shadow: 0px 0px 10px grey; background-color: #d0d0d0">
+<div markdown=1 style="border-radius: 5px; box-shadow: 0px 0px 10px grey; background-color: #d0d0d0">
 
 ![commits across the day](/assets/img/commit-diagram-2.svg)
 commits across the day 2
