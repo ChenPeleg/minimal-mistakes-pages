@@ -36,20 +36,10 @@ jobs:
         run: |
           cp -r ./docs/site/. ./
           cp -r ./docs/. ./_tabs
-          cp -r ./_tabs/. ./_temp_posts
-      - name: rename the post files with date
-        run: |
-          cd ./_temp_posts
+          cd ./docs
           ls | xargs -I {} mv {} 2023-2-2-{}
-
-      - name: copy fake files to post
-        run: |
-          ls
-          cp -r ./_temp_posts/. ./_posts
-      - name: Check post folder
-        run: |
-          ls ./_temp_posts/
-
+          cd ..
+          cp -r ./docs/. ./_posts
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v1
