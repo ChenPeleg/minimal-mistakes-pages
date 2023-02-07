@@ -20,11 +20,16 @@ Imaging this is your work day, and the circles represent the commits over time:
 ![commits across the day](/assets/img/commit-diagram-1.svg)
 </div>
 
-Imaging this is your work day, and the dots represent the commits time stamps:
+The calculation is like this:
 
-<div markdown=1 style="border-radius: 5px; box-shadow: 0px 0px 10px grey; background-color: #d0d0d0">
+1. We check the time differences between commits:
 
+<div markdown=1 style="border-radius: 5px; box-shadow: 0px 0px 10px #6a6a6a; padding: 15px 30px ; background-color: #b2b2b2">
 ![commits across the day](/assets/img/commit-diagram-2.svg)
-commits across the day 2
+</div>
 
+2. If the diffrence is less than the value of **max-diff-for-session**, than the commits are in the same session. If the difference is greater, than they are on different session. 
+
+<div markdown=1 style="border-radius: 5px; box-shadow: 0px 0px 10px #6a6a6a; padding: 15px 30px ; background-color: #b2b2b2">
+![commits across the day](/assets/img/commit-diagram-3.svg)
 </div>
