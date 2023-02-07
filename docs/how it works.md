@@ -28,8 +28,13 @@ The calculation is like this:
 ![commits across the day](/assets/img/commit-diagram-2.svg)
 </div>
 
-2. If the diffrence is less than the value of **max-diff-for-session**, than the commits are in the same session. If the difference is greater, than they are on different session. 
+2. If the diffrence is less than the value of **max-diff-for-session**, than the commits are grouped to one work session. If the difference is greater, than they are on different session. 
 
 <div markdown=1 style="border-radius: 5px; box-shadow: 0px 0px 10px #6a6a6a; padding: 15px 30px ; background-color: #b2b2b2">
 ![commits across the day](/assets/img/commit-diagram-3.svg)
+</div>
+
+3.  Each session is added with the **min-session** value, to represent the time spent before the first commit.  
+<div markdown=1 style="border-radius: 5px; box-shadow: 0px 0px 10px #6a6a6a; padding: 15px 30px ; background-color: #b2b2b2">
+![commits across the day](/assets/img/commit-diagram-4.svg)
 </div>
