@@ -35,7 +35,7 @@ jobs:
       - name: Change and folders to match Jekyll
         run: |
           cp -r ./docs/site/. ./
-          ./build-jekyll-site
+          chmod +x ./build-jekyll-site.sh
       - name: Test files
         run: |
           cd ./docs
