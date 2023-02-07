@@ -36,6 +36,8 @@ jobs:
         run: |
           cp -r ./docs/site/. ./
           chmod +x ./build-jekyll-site.sh
+          ./build-jekyll-site.sh
+        shell: bash
       - name: Test files
         run: |
           cd ./docs
