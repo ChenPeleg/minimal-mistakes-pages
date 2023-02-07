@@ -32,7 +32,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Change and folders to match Jekyll
+      - name: Change and folders to match Jekyll structure
         run: |
           cp -r ./docs/site/. ./
           chmod +x ./build-jekyll-site.sh
