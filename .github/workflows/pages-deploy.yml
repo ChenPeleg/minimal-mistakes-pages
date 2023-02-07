@@ -40,6 +40,16 @@ jobs:
           ls | xargs -I {} mv {} 2023-2-2-{}
           cd ..
           cp -r ./docs/. ./_posts
+      - name: Test files
+        run: |
+          cd ./docs
+          echo "===== Docs ====="
+          ls
+          cd ..
+          cd ./_posts
+          echo "===== posts ====="
+          ls
+          cd ..
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v1
