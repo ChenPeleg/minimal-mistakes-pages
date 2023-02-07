@@ -4,6 +4,9 @@ title : about
 icon: fas fa-info-circle
 order: 4
 ---
+Build by [Chen Peleg](https://github.com/ChenPeleg)
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+### contributing
+
+To contribute create a pull request for the main branch.
+ 
