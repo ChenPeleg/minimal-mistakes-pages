@@ -42,7 +42,7 @@ The calculation is like this:
 ![commits across the day](/assets/img/commit-diagram-5.svg)
 </div>
 
-## Result
+### Result
 
 The work days are concluded in a table ike this:
 

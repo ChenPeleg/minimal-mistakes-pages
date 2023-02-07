@@ -3,7 +3,7 @@ title : how to use
 icon: fas fa-archive
 order: 3
 --- 
-### Basic usage
+## Basic usage
 
 The package is written in 100% Vanilla js without dependencies (Not including dev-dependencies), to be able to run on most versions of NodeJs. That is why it's recommended not to install it but to use it like this:
 
@@ -16,6 +16,8 @@ when run without options it should be run inside a git repository:
 - The username will come from the `git config` data.
 - The git repo will be the first repo that the `git log` command will find. 
 - The output will be in a csv format and the file will be saved in the temp folder. 
+- 
+## Options
 
 These are the options, with which you can change the default behaviour:
 
@@ -32,10 +34,10 @@ These are the options, with which you can change the default behaviour:
     -h,   --help                         prints help options
 ``` 
 
-# Examples
-## Changing the algorithm settings
+## Examples
+### Changing the algorithm settings
 
-## From and To Date
+### From and To Date
 
 These uses the git log [--until](https://git-scm.com/docs/git-log#Documentation/git-log.txt---untilltdategt)
 and [--since](https://git-scm.com/docs/git-log#Documentation/git-log.txt---sinceltdategt). 
@@ -43,7 +45,7 @@ and [--since](https://git-scm.com/docs/git-log#Documentation/git-log.txt---since
 ```console
 $ npx hours-report --date-from="2-2-23"
 ``` 
-## Output
+### Output
 
 To output the information only to the console, without generating a csv file, use:
 ```console
